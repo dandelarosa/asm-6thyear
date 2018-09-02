@@ -59,3 +59,6 @@ typings/
 
 # next.js build output
 .next
+
+# Ignore .DS_Store files for developers on Mac
+.DS_Store
