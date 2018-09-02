@@ -28,8 +28,8 @@ function CreditsScene() {
 
     canvasContext.font = '20px Times';
 
-    drawText('Annual Saga Monthly Game 5 (August 2018)', GAME_WIDTH/2, 150, 'black', 'center', 'middle');
-    drawText('Dexternites 2 Prototype', GAME_WIDTH/2, 200, 'black', 'center', 'middle');
+    drawText('Annual Saga Monthly Game 6 (September 2018)', GAME_WIDTH/2, 150, 'black', 'center', 'middle');
+    drawText('Dexternites 3 Prototype', GAME_WIDTH/2, 200, 'black', 'center', 'middle');
 
     drawText('All Programming: Dan Dela Rosa', GAME_WIDTH/2, 300, 'black', 'center', 'middle');
     drawText('All Art: Dan Dela Rosa', GAME_WIDTH/2, 350, 'black', 'center', 'middle');

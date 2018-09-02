@@ -74,7 +74,7 @@ function MainMenuScene() {
     canvasContext.font = '48px Times';
     drawText('Dexternites', GAME_WIDTH/2, 40, 'black', 'center', 'middle');
     canvasContext.font = '30px Times';
-    drawText('The Prototype 2000', GAME_WIDTH/2, 80, 'black', 'center', 'middle');
+    drawText('3: The Prototype', GAME_WIDTH/2, 80, 'black', 'center', 'middle');
 
     canvasContext.font = '20px Times';
 

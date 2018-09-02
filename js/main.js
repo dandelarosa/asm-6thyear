@@ -5,7 +5,7 @@ const FPS = 30;
 /**
  * IMPORTANT: This prefix must be unique to each game.
  */
-const SAVE_STATE_SLOT_PREFIX = "dexternites_2_prototype_slot_";
+const SAVE_STATE_SLOT_PREFIX = "dexternites_3_prototype_slot_";
 
 window.addEventListener("load", function(event) {
   initGameState();
