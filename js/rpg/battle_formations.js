@@ -1,48 +1,54 @@
 function setupBattleFormationForSelectedOption(selectedOption) {
   if (selectedOption === "Fight Formation 1") {
     enemies = [
-      new BadderGuy(30),
+      new Sproutmon(3),
+      new Sproutmon(3),
+      new Sproutmon(3),
     ];
   }
   else if (selectedOption === "Fight Formation 2") {
     enemies = [
-      new BadderGuy(32),
-      new Barmander(32),
-      new BadderGuy(32),
+      new Sproutmon(3),
+      new FlyingBook(5),
+      new Sproutmon(3),
     ];
   }
   else if (selectedOption === "Fight Formation 3") {
     enemies = [
-      new Barmander(40),
-      new PizzaToto(40),
-      new Barmander(40),
-      new PizzaToto(40),
+      new Sproutmon(5),
+      new Sproutmon(5),
+      new Sproutmon(5),
+      new Sproutmon(5),
     ];
   }
   else if (selectedOption === "Fight Formation 4") {
     enemies = [
-      new Aquarius(42),
-      new Aquarius(42),
-      new Aquarius(42),
-      new Aquarius(42),
+      new Sproutmon(5),
+      new Bulbmon(7),
+      new Sproutmon(5),
+      new Bulbmon(7),
     ];
   }
   else if (selectedOption === "Fight Formation 5") {
     enemies = [
-      new Sagittarius(45),
-      new Sagittarius(45),
-      new Sagittarius(45),
+      new Bulbmon(7),
+      new BeeWarrior(7),
+      new Bulbmon(7),
     ];
   }
   else if (selectedOption === "Fight Formation 6") {
     enemies = [
-      new Gemini(50),
-      new Gemini(50),
+      new BeeWarrior(9),
+      new DarkLilyQueen(12),
+      new BeeWarrior(9),
     ];
   }
   else if (selectedOption === "Fight Formation 7") {
     enemies = [
-      new Zankon(60),
+      new BaddestGuy(15),
+      new BaddestGuy(15),
+      new BaddestGuy(15),
+      new BaddestGuy(15),
     ];
   }
   else {
