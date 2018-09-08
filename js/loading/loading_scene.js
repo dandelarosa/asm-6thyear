@@ -8,7 +8,7 @@ function LoadingScene() {
   this.update = function() {
     if (this.loaded) {
       if (leftClicked) {
-        nextScene = new MainMenuScene();
+        nextScene = new TitleMenuScene();
       }
     }
 

@@ -1,12 +1,14 @@
-const MAIN_MENU_OPTION_FIGHT = "Fight Enemies";
-const MAIN_MENU_OPTION_INN = "Go to Inn";
-const MAIN_MENU_OPTION_SAVE = "Save Game";
+const TITLE_MENU_OPTION_NEW_GAME = "New Game";
+const TITLE_MENU_OPTION_LOAD_GAME = "Load Game";
+const TITLE_MENU_OPTION_INSTRUCTIONS = "Instructions";
+const TITLE_MENU_OPTION_CREDITS = "Credits";
 
-function MainMenuScene() {
+function TitleMenuScene() {
   this.options = [
-    MAIN_MENU_OPTION_FIGHT,
-    MAIN_MENU_OPTION_INN,
-    MAIN_MENU_OPTION_SAVE,
+    TITLE_MENU_OPTION_NEW_GAME,
+    TITLE_MENU_OPTION_LOAD_GAME,
+    TITLE_MENU_OPTION_INSTRUCTIONS,
+    TITLE_MENU_OPTION_CREDITS,
   ];
   this.selectedIndex = 0;
   this.inputDelay = 5;
@@ -32,14 +34,18 @@ function MainMenuScene() {
       }
       else if (confirmPressed()) {
         var selectedOption = this.options[this.selectedIndex];
-        if (selectedOption === MAIN_MENU_OPTION_SAVE) {
-          saveGameToSlot(SAVE_STATE_SLOT_PREFIX + 1);
+        if (selectedOption === TITLE_MENU_OPTION_NEW_GAME) {
+          nextScene = new MainMenuScene();
         }
-        else if (selectedOption === MAIN_MENU_OPTION_INN) {
-          nextScene = new InnScene();
+        else if (selectedOption === TITLE_MENU_OPTION_LOAD_GAME) {
+          loadGameFromSlot(SAVE_STATE_SLOT_PREFIX + 1);
+          nextScene = new MainMenuScene();
         }
-        else if (selectedOption === MAIN_MENU_OPTION_FIGHT) {
-          nextScene = new BattleSelectionScene();
+        else if (selectedOption === TITLE_MENU_OPTION_INSTRUCTIONS) {
+          nextScene = new InstructionsScene();
+        }
+        else if (selectedOption === TITLE_MENU_OPTION_CREDITS) {
+          nextScene = new CreditsScene();
         }
         didPressButton = true;
       }
@@ -80,23 +86,6 @@ function MainMenuScene() {
       drawText(optionText, menuOptionX, menuOptionY, optionColor, 'left', 'top');
 
       menuOptionY += 40;
-    }
-
-    var heroTextX = 300;
-    var heroTextY = 150;
-
-    drawText("Your Heroes", heroTextX, heroTextY, 'black', 'left', 'top');
-    heroTextY += 40;
-
-    for (var i = 0; i < partyMembers.length; i++) {
-      var hero = partyMembers[i];
-      drawText(hero.name, heroTextX, heroTextY, 'black', 'left', 'top');
-
-      heroTextY += 30; 
-      var heroStatsText = "Level " + hero.level + " HP: " + hero.currentHP + "/" + hero.maxHP;
-      drawText(heroStatsText, heroTextX, heroTextY, 'black', 'left', 'top');
-
-      heroTextY += 40;
     }
   }
 }

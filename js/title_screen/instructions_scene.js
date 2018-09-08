@@ -7,7 +7,7 @@ function InstructionsScene() {
       var didPressButton = false;
 
       if (cancelPressed()) {
-        nextScene = new MainMenuScene();
+        nextScene = new TitleMenuScene();
         didPressButton = true;
       }
       
