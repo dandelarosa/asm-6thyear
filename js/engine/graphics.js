@@ -6,6 +6,7 @@ function setupGraphics(canvasWidth, canvasHeight) {
   canvas.height = canvasHeight;
   document.body.appendChild(canvas);
   canvasContext = canvas.getContext('2d');
+  canvasContext.imageSmoothingEnabled = false;
 }
 
 function drawRect(topLeftX, topLeftY, boxWidth, boxHeight, fillStyle) {

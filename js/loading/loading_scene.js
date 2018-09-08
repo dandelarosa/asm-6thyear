@@ -1,8 +1,7 @@
 function LoadingScene() {
   this.init = function() {
     this.loaded = false;
-    // In actuality we would load the rest of the game assets, but for now just make sure this thing even renders
-    this.loadTimer = 15;
+    loadImages();
   };
   this.init();
 
@@ -13,11 +12,8 @@ function LoadingScene() {
       }
     }
 
-    if (this.loadTimer === 0) {
+    if (imagesLoaded === imagesToLoad.length) {
       this.loaded = true;
-    }
-    else {
-      this.loadTimer--;
     }
   };
 

@@ -121,7 +121,7 @@ function RPGBattleScene() {
     for (var i = 0; i < partyMembers.length; i++) {
       var partyMember = partyMembers[i];
       if (partyMember.currentHP > 0) {
-        drawRect(heroX, heroY, 64, 96, '#90ee90');
+        canvasContext.drawImage(placeholderHeroImage, heroX, heroY, 64, 96);
       }
       heroX += heroStepX;
       heroY += heroStepY;
