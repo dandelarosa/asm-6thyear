@@ -135,7 +135,7 @@ function RPGBattleScene() {
     for (var i = 0; i < enemies.length; i++) {
       var enemy = enemies[i];
       if (enemy.currentHP > 0) {
-        drawRect(enemyX, enemyY, 64, 96, '#FA8072');
+        canvasContext.drawImage(placeholderEnemyImage, enemyX, enemyY, 64, 96);
       }
       enemyX += enemyStepX;
       enemyY += enemyStepY;

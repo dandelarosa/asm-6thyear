@@ -1,7 +1,12 @@
 // List these in alphabetical order
+var placeholderEnemyImage = document.createElement('img');
 var placeholderHeroImage = document.createElement('img');
 
 var imagesToLoad = [
+  {
+    imgPointer: placeholderEnemyImage,
+    path: 'assets/placeholder_enemy.png',
+  },
   {
     imgPointer: placeholderHeroImage,
     path: 'assets/placeholder_hero.png',
