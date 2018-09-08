@@ -87,6 +87,7 @@ function RPGBattleScene() {
 
   this.draw = function() {
     drawRect(0, 0, GAME_WIDTH, GAME_HEIGHT, '#f8f8f8');
+    canvasContext.drawImage(placeholderBackgroundImage, 0, 0);
 
     var textX = 20;
     var textY = 20;
