@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Game</title>
+  <link rel="stylesheet" type="text/css" href="styles/main.css">
+</head>
+
+<body>
+  <!-- Install generic engine code first -->
+  <script src="js/engine/game_loop.js"></script>
+  <script src="js/engine/graphics.js"></script>
+  <script src="js/engine/keyboard.js"></script>
+  <script src="js/engine/local_storage_helper.js"></script>
+  <script src="js/engine/mouse.js"></script>
+  <!-- Then game-specific code -->
+  <script src="js/game-specific/combatant/combatant.js"></script>
+  <!-- List heroes in alphabetical order, but hero superclass must be loaded first -->
+  <script src="js/game-specific/heroes/hero.js"></script>
+  <script src="js/game-specific/heroes/david.js"></script>
+  <script src="js/game-specific/heroes/larry.js"></script>
+  <script src="js/game-specific/heroes/luke.js"></script>
+  <script src="js/game-specific/heroes/shane.js"></script>
+  <script src="js/game-specific/heroes/wesley.js"></script>
+  <!-- List enemies in alphabetical order, but enemy superclass must be loaded first -->
+  <script src="js/game-specific/enemies/enemy.js"></script>
+  <script src="js/game-specific/enemies/aquarius.js"></script>
+  <script src="js/game-specific/enemies/baddest_guy.js"></script>
+  <script src="js/game-specific/enemies/barmander.js"></script>
+  <script src="js/game-specific/enemies/bee_warrior.js"></script>
+  <script src="js/game-specific/enemies/bulbmon.js"></script>
+  <script src="js/game-specific/enemies/dark_lily_queen.js"></script>
+  <script src="js/game-specific/enemies/flying_book.js"></script>
+  <script src="js/game-specific/enemies/gemini.js"></script>
+  <script src="js/game-specific/enemies/pizza_toto.js"></script>
+  <script src="js/game-specific/enemies/sagittarius.js"></script>
+  <script src="js/game-specific/enemies/sproutmon.js"></script>
+  <script src="js/game-specific/enemies/zankon.js"></script>
+  <!-- Other game-specific code -->
+  <script src="js/game-specific/inn_scene.js"></script>
+  <script src="js/game-specific/input.js"></script>
+  <script src="js/game-specific/saving.js"></script>
+  <script src="js/loading/assets.js"></script>
+  <script src="js/loading/loading_loading_scene.js"></script>
+  <script src="js/loading/loading_scene.js"></script>
+  <script src="js/loading/loading_screen_assets.js"></script>
+  <script src="js/rpg/actions/attack_action.js"></script>
+  <script src="js/rpg/battle_formations.js"></script>
+  <script src="js/rpg/enemy_ai.js"></script>
+  <script src="js/rpg/rpg_battle_scene.js"></script>
+  <script src="js/rpg/turn_manager_display.js"></script>
+  <script src="js/rpg/turn_manager.js"></script>
+  <script src="js/title_screen/battle_selection_scene.js"></script>
+  <script src="js/title_screen/credits_scene.js"></script>
+  <script src="js/title_screen/instructions_scene.js"></script>
+  <script src="js/title_screen/main_menu_scene.js"></script>
+  <script src="js/title_screen/title_menu_scene.js"></script>
+  <script src="js/ui/attack_target_menu.js"></script>
+  <script src="js/ui/defeat_menu.js"></script>
+  <script src="js/ui/item_menu.js"></script>
+  <script src="js/ui/main_battle_menu.js"></script>
+  <script src="js/ui/tech_menu.js"></script>
+  <script src="js/ui/victory_menu.js"></script>
+  <!-- Import top-level scripts here -->
+  <script src="js/battle_state.js"></script>
+  <script src="js/game_state.js"></script>
+  <!-- Always main.js import last -->
+  <script src="js/main.js"></script>
+</body>
+</html>
