@@ -6,7 +6,7 @@ function InstructionsScene() {
     if (this.inputDelayTimer === 0) {
       var didPressButton = false;
 
-      if (cancelPressed()) {
+      if (confirmPressed() || cancelPressed()) {
         nextScene = new TitleMenuScene();
         didPressButton = true;
       }
@@ -52,6 +52,6 @@ function InstructionsScene() {
     drawText('cancel action / go back', GAME_WIDTH/2, textY, 'black', 'center', 'middle');
     textY += 40;
 
-    drawText('Escape to go back', GAME_WIDTH/2, 450, 'black', 'center', 'middle');
+    drawText('Press confirm or cancel to go back', GAME_WIDTH/2, 450, 'black', 'center', 'middle');
   }
 }

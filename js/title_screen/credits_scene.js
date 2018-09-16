@@ -6,7 +6,7 @@ function CreditsScene() {
     if (this.inputDelayTimer === 0) {
       var didPressButton = false;
 
-      if (cancelPressed()) {
+      if (confirmPressed() || cancelPressed()) {
         nextScene = new TitleMenuScene();
         didPressButton = true;
       }
@@ -34,6 +34,6 @@ function CreditsScene() {
     drawText('All Programming: Dan Dela Rosa', GAME_WIDTH/2, 300, 'black', 'center', 'middle');
     drawText('All Art: Dan Dela Rosa', GAME_WIDTH/2, 350, 'black', 'center', 'middle');
 
-    drawText('Press Escape to go back', GAME_WIDTH/2, 450, 'black', 'center', 'middle');
+    drawText('Press confirm or cancel to go back', GAME_WIDTH/2, 450, 'black', 'center', 'middle');
   }
 }
