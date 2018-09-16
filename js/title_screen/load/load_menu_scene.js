@@ -1,24 +1,12 @@
 function LoadMenuScene() {
-  this.inputDelay = 5;
-  this.inputDelayTimer = this.inputDelay;
+  this.menu = new LoadMenu(20, 200, 600, 250);
+  this.menu.callback = function() {
+    loadGameFromSlot(SAVE_STATE_SLOT_PREFIX + 1);
+    nextScene = new MainMenuScene();
+  }
 
   this.update = function() {
-    if (this.inputDelayTimer === 0) {
-      var didPressButton = false;
-
-      if (confirmPressed()) {
-        loadGameFromSlot(SAVE_STATE_SLOT_PREFIX + 1);
-        nextScene = new MainMenuScene();
-        didPressButton = true;
-      }
-
-      if (didPressButton) {
-        this.inputDelayTimer = this.inputDelay;
-      }
-    }
-    else {
-      this.inputDelayTimer--;
-    }
+    this.menu.update();
   }
 
   this.draw = function(ctx) {
@@ -32,6 +20,6 @@ function LoadMenuScene() {
     canvasContext.font = '20px Times';
     drawText('Not implemented yet. Press confirm to load Slot 1.', 20, 160, 'black', 'left', 'middle');
 
-    // TODO: draw "Not Implemented" text
+    this.menu.draw(ctx);
   }
 }
