@@ -38,8 +38,7 @@ function TitleMenuScene() {
           nextScene = new MainMenuScene();
         }
         else if (selectedOption === TITLE_MENU_OPTION_LOAD_GAME) {
-          loadGameFromSlot(SAVE_STATE_SLOT_PREFIX + 1);
-          nextScene = new MainMenuScene();
+          nextScene = new LoadMenuScene();
         }
         else if (selectedOption === TITLE_MENU_OPTION_INSTRUCTIONS) {
           nextScene = new InstructionsScene();

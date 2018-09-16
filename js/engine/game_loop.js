@@ -20,5 +20,5 @@ function updateGame() {
 }
 
 function drawGame() {
-  currentScene.draw();
+  currentScene.draw(canvasContext);
 }
